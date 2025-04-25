@@ -3,136 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Windows XP</title>
-    <link rel="stylesheet" href="./Styles/style.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./Styles/booting.css" />
   </head>
-
   <body>
-    <div class="screen__support"></div>
-    <img class="laptop" src="./Assets/laptop/computer-laptop-icon.svg" alt="">
-    <div class="container">
-      <div class="laptop__light">
-        <!------------------ ESCRITORIO -------------------->
-        <div class="desktop">
-          <!------------------ ICONOS ESCRITORIO -------------------->
-          <button class="desktop__icons">
-            <img
-              class="desktop__icon"
-              src="./Assets/icons/MyComputer.png"
-              alt=""
-            />
-            <p>Mi PC</p>
-          </button>
-          <button class="desktop__icons">
-            <img
-              class="desktop__icon"
-              src="./Assets/icons/WindowsMediaPlayer.png"
-              alt=""
-            />
-            <p>Windows Media Player</p>
-          </button>
-          <button class="desktop__icons">
-            <img
-              class="desktop__icon"
-              src="./Assets/icons/InternetExplorer.png"
-              alt=""
-            />
-            <p>Internet Explorer</p>
-          </button>
-          <button class="desktop__icons">
-            <img
-              class="desktop__icon"
-              src="./Assets/icons/RecycleBin.png"
-              alt=""
-            />
-            <p>Papelera de Reciclaje</p>
-          </button>
-          <!------------------  MENU DE INICIO -------------------->
-          <div id="start__menu" class="start__menu">
-            <div class="start__menu--profile">
-              <img
-                class="profile__img"
-                src="./Assets/icons/Profile Icons/skater.bmp"
-                alt=""
-              />
-              <p>Jona Saavedra</p>
-            </div>
-            <div class="start__menu--icons">
-              <div class="icons__left"></div>
-              <div class="icons__right"></div>
-            </div>
-            <div class="start__menu--turnoff">
-              <div class="turnoff__button">
-                <img
-                  class="turnoff__img"
-                  src="./Assets/icons/Windows/CloseSession.ico"
-                  alt=""
-                />
-                <p>Cerrar Sesión</p>
-              </div>
-              <div class="turnoff__button">
-                <img
-                  class="turnoff__img"
-                  src="./Assets/icons/Windows/TurnOff.ico"
-                  alt=""
-                />
-                <p>Apagar Equipo</p>
-              </div>
-            </div>
-          </div>
+    <div class="booting__windows">
+      <img
+        class="booting__windows--img"
+        src="./Assets/booting/windowsBooting.png"
+        alt=""
+      />
+      <div class="booting__windows--loading">
+        <div class="booting__windows--blue">
+          <div class="blue"></div>
+          <div class="blue"></div>
+          <div class="blue"></div>
         </div>
-        <!------------------ BARRA DE TAREAS -------------------->
-        <div class="taskbar">
-          <div class="taskbar__start">
-            <button
-              class="start"
-              id="taskbar__start__button"
-              onclick="openStartMenu()"
-              href=""
-            >
-              <img
-                class="startbutton__icon"
-                src="./Assets/icons/windows start.svg"
-                alt=""
-              />
-              <p class="startbutton__p">Inicio</p>
-            </button>
-          </div>
-          <div class="taskbar__icons">
-            <button class="pinned__icons">
-              <img
-                class="pinned__icon"
-                src="./Assets/icons/InternetExplorer.png"
-                alt=""
-              />
-            </button>
-            <button class="pinned__icons"></button>
-            <div class="taskbar__windows"></div>
-          </div>
-          <div class="taskbar__system--tray">
-            <button class="system__tray--arrows">
-              <img
-                class="system__tray--arrow"
-                src="./Assets/icons/Windows/Taskbar/arrow.svg"
-                alt=""
-              />
-            </button>
-            <button class="system__tray--icons">
-              <img src="./Assets/icons/Windows/wifi.ico" alt="" />
-            </button>
-            <button class="system__tray--icons">
-              <img
-                class="system__tray--icon"
-                src="./Assets/icons/Windows/Messenger.ico"
-                alt=""
-              />
-            </button>
-            <p id="hour">00:00</p>
-          </div>
+      </div>
+      <p class="booting__windows--copyright">
+        Copyright &copy; Microsoft Corporation - Jona Saavedra
+      </p>
+      <img
+        src="./Assets/Logos/Microsoft_booting_logo.svg"
+        class="booting__windows--logo"
+      />
+    </div>
+    <div class="login__windows">
+      <div class="login__bar"></div>
+      <div class="login__users">
+        <div class="login__logo">
+          <img
+            class="login__logo--img"
+            src="./Assets/booting/windowsBooting.png"
+            alt=""
+          />
+          <p class="login__logo--p">
+            Para comenzar, haga clic en su nombre de usuario
+          </p>
+        </div>
+        <div class="login__username">
+          <a href="desktop.html">
+            <img
+              class="login__username--img"
+              src="./Assets/icons/Profile Icons/skater.bmp"
+              alt=""
+            />
+          </a>
+          <p class="login__username--p">Jona Saavedra</p>
+        </div>
+      </div>
+      <div class="login__bar">
+        <div class="login__turnoff">
+          <button class="login__turnoff--button">
+            <img
+              class="login__turnoff--img"
+              src="./Assets/icons/Windows/TurnOff.ico"
+              alt=""
+            />
+          </button>
+          <p class="login__turnoff--p">Apagar equipo</p>
+        </div>
+        <div class="login__details">
+          <p>Después de iniciar sesión, puede agregar o cambiar cuentas.</p>
+          <p>Vaya al Panel de Control y haga clic en Cuentas de usuario.</p>
         </div>
       </div>
     </div>
 
-    <script src="JS/script.js"></script>
+    <script src="JS/booting.js"></script>
+    t
   </body>
 </html>

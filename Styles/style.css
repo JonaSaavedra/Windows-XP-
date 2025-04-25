@@ -53,23 +53,6 @@ button {
 }
 
 
-.screen__support{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    height: 300px;
-    width: 200px;
-    background-color: #070c14;
-    z-index: 0;
-}
-
-.laptop__light{
-    position: absolute;
-    box-shadow: 0px 0px 10px var(--white-color);
-    height: 100%;
-}
-
 .container{
     background-image: url(../Assets/bg/Background\ xp.jpg);
     background-size: cover;
@@ -201,8 +184,8 @@ button {
 /* ---------------ESCRITORIO--------------- */
 .desktop{
     position: relative;
-    width: 100%;
-    height: calc(100% - 28px);
+    width: 100vw;
+    height: 100vh;
     display: grid;
     grid-auto-flow: column;
     gap: 10px;
@@ -223,6 +206,10 @@ button {
     text-align: center;
 }
 
+.desktop__icons p{
+    font-size: 14px;
+}
+
 .desktop__icons:active p{
     display: inline-block;
     background-color: var(--background-icons);
@@ -234,7 +221,7 @@ button {
 }
 
 .desktop__icon{
-    width: 32px;
+    width: 50px;
 }
 
 /* -----------------MENU INICIO----------------- */
@@ -245,7 +232,7 @@ button {
     background: var(--taskbar-wxp);
     background: linear-gradient(180deg, var(--taskbar-wxp) 0%, var(--taskbar-wxp-tray2) 80%, var(--taskbar-wxp-tray2) 81%, var(--taskbar-wxp) 100%);
     position: absolute;
-    bottom: 0;
+    bottom: 28px;
     left: 0;
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
