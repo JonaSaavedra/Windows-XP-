@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+ background: ;
+ color: white;
+ -webkit-font-smoothing: antialiased;
+}
+
+body, input, button {
+ font-size: 16px;
+ font-family: var(--body-font);
+ cursor: default;
+}
+
+button {
+ cursor: pointer;
+}
+
+@font-face {
+    font-family: Tahoma Regular;
+    src: url(../Styles/Fonts/tahoma.ttf);
+}
+
+@font-face {
+    font-family: Franklin Gothic Italic;
+    src: url(./Fonts/framdit.ttf);
+}
+
+@font-face {
+    font-family: Helvetica;
+    src: url(./Fonts/helveticablackoriginal_bold.otf);
+}
+
+:root{
+    --taskbar-wxp: #2a59ec;
+    --background-icons: #2a5aecd5;
+    --taskbar-wxp-2: #0C9AEC;
+    --start-button: #1c8700;
+    --start-menu: #d3e5fb;
+    --start-menu-bg: #bed0de;
+    --start-font: Franklin Gothic Italic;
+    --body-font: Tahoma Regular;
+    --microsoft-font: Helvetica;
+}
+/* -------------------BOOTING WINDOWS---------------------- */
+.booting__windows{
+    background-color: black;
+    height: 720px;
+    width: 1280px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.booting__windows--img{
+    position: absolute;
+    top: 200px;
+    height: 200px;
+}
+
+.booting__windows--loading{
+    position: absolute;
+    top: 420px;
+    width: 200px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.booting__windows--blue{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0 2px;
+    position: absolute;
+    animation: slide steps(15) infinite 1s;
+}
+
+.blue{
+    width: 10px;
+    height: 17px;
+    background-color: var(--taskbar-wxp);
+
+}
+
+@keyframes slide {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+.booting__windows--copyright{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-family: var(--body-font);
+}
+
+.booting__windows--logo{
+    width: 200px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* -------------------LOGIN WINDOWS---------------------- */
+
+.login__windows{
+    background-color: #5A7EDC;
+    height: 720px;
+    width: 1280px;
+    position: relative;
+}
+
+.login__bar{
+    height: 20%;
+    background-color: #00309C;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.login__users{
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.login__logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    width: 50%;
+    gap: 2rem;
+}
+
+.login__logo--p{
+    font-size: 1.4rem;
+    padding: 0 42px 0 34%;
+    text-align: end;
+}
+
+.login__logo--img{
+    width: 250px;
+}
+
+.login__username{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    gap: 1rem;
+}
+
+.login__username--img{
+    height: 64px;
+    border: 3px solid white;
+    border-radius: 4px;
+}
+
+.login__username--p{
+    text-align: start;
+    align-self: flex-start;
+    font-size: 1.4rem;
+}
+
+.login__turnoff{
+    display: flex;
+    align-items: center;
+    height: 48px;
+}
+
+.login__turnoff--p{
+    font-size: 1.3rem;
+}
+
+.login__details{
+    width: 370px;
+    height: auto;
+}
+
+.login__turnoff--button{
+    border: none;
+    background-color: transparent;
+    height: 48px;
+    width: 48px;
+}
+
+.login__turnoff--img:hover{
+    filter: brightness(1.1);
+}
