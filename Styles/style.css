@@ -19,7 +19,7 @@
     --white-color: rgb(255,255,255);
     --taskbar-wxp: rgb(42, 89, 236);
     --taskbar-wxp2: rgb(77, 169, 245);
-    --background-icons: rgba(42, 90, 236, 0.835);
+    /* --background-icons: rgba(42, 90, 236, 0.835); */
     --taskbar-wxp-tray: rgb(12, 154, 236);
     --taskbar-wxp-tray2: rgb(106, 186, 233);
     --start-button: rgb(28, 135, 0);
@@ -34,9 +34,10 @@ body {
     width: 100vw;
     position: relative;
     background: var(--white-color);
-    background-image: url(../Assets/bg/22110810_6566790.svg);
+    background-image: url(../Assets/bg/Background\ xp.jpg);
     background-size:cover;
     -webkit-font-smoothing: antialiased;
+    overflow: hidden;
 }
 
 body,
@@ -50,24 +51,10 @@ button {
 button {
     cursor: default;
     border: none;
+    border: none;
+    background-color: transparent;
 }
 
-
-.container{
-    background-image: url(../Assets/bg/Background\ xp.jpg);
-    background-size: cover;
-    /* height: 720px;
-    width: 1280px; */
-    height: 100%;
-    width: 100%;
-    position: relative;
-    /* border: 50px solid #070c14;
-    border-radius: 30px; */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
 /* ---------------BARRA DE TAREAS--------------------- */
 .taskbar{
     background: var(--taskbar-wxp);
@@ -227,8 +214,8 @@ button {
 /* -----------------MENU INICIO----------------- */
 
 .start__menu{
-    height: 69%;
-    width: 30%;
+    height: 600px;
+    width: 500px;
     background: var(--taskbar-wxp);
     background: linear-gradient(180deg, var(--taskbar-wxp) 0%, var(--taskbar-wxp-tray2) 80%, var(--taskbar-wxp-tray2) 81%, var(--taskbar-wxp) 100%);
     position: absolute;
@@ -241,6 +228,18 @@ button {
     flex-direction: column;
     display: none;
     box-shadow: 3px 2px 2px rgb(41, 39, 39);
+    animation: up 0.2s ease-in forwards;
+}
+
+@keyframes up {
+    0%{
+        bottom: calc(-600px - 28px);
+        width: 0px;
+    }
+    100%{
+        bottom: 28px;
+        width: 500px;
+    }
 }
 
 .start__menu--profile{

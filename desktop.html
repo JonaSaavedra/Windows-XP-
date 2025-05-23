@@ -8,130 +8,98 @@
   </head>
 
   <body>
-    <div class="screen__support"></div>
-    <img class="laptop" src="./Assets/laptop/computer-laptop-icon.svg" alt="">
-    <div class="container">
-      <div class="laptop__light">
-        <!------------------ ESCRITORIO -------------------->
-        <div class="desktop">
-          <!------------------ ICONOS ESCRITORIO -------------------->
-          <button class="desktop__icons">
+      <!------------------ ESCRITORIO -------------------->
+      <div class="desktop" id="desktop">
+        <!------------------  MENU DE INICIO -------------------->
+        <div id="start__menu" class="start__menu">
+          <div class="start__menu--profile">
             <img
-              class="desktop__icon"
-              src="./Assets/icons/MyComputer.png"
+              class="profile__img"
+              src="./Assets/icons/Profile Icons/skater.bmp"
               alt=""
             />
-            <p>Mi PC</p>
-          </button>
-          <button class="desktop__icons">
-            <img
-              class="desktop__icon"
-              src="./Assets/icons/WindowsMediaPlayer.png"
-              alt=""
-            />
-            <p>Windows Media Player</p>
-          </button>
-          <button class="desktop__icons">
-            <img
-              class="desktop__icon"
-              src="./Assets/icons/InternetExplorer.png"
-              alt=""
-            />
-            <p>Internet Explorer</p>
-          </button>
-          <button class="desktop__icons">
-            <img
-              class="desktop__icon"
-              src="./Assets/icons/RecycleBin.png"
-              alt=""
-            />
-            <p>Papelera de Reciclaje</p>
-          </button>
-          <!------------------  MENU DE INICIO -------------------->
-          <div id="start__menu" class="start__menu">
-            <div class="start__menu--profile">
-              <img
-                class="profile__img"
-                src="./Assets/icons/Profile Icons/skater.bmp"
-                alt=""
-              />
-              <p>Jona Saavedra</p>
-            </div>
-            <div class="start__menu--icons">
-              <div class="icons__left"></div>
-              <div class="icons__right"></div>
-            </div>
-            <div class="start__menu--turnoff">
-              <div class="turnoff__button">
+            <p>Jona Saavedra</p>
+          </div>
+          <div class="start__menu--icons">
+            <div class="icons__left"></div>
+            <div class="icons__right"></div>
+          </div>
+          <div class="start__menu--turnoff">
+            <div class="turnoff__button">
+              <button>
                 <img
                   class="turnoff__img"
                   src="./Assets/icons/Windows/CloseSession.ico"
                   alt=""
                 />
-                <p>Cerrar Sesión</p>
-              </div>
-              <div class="turnoff__button">
+              </button>
+              <p>Cerrar Sesión</p>
+            </div>
+
+            <div class="turnoff__button">
+              <button>
                 <img
                   class="turnoff__img"
                   src="./Assets/icons/Windows/TurnOff.ico"
                   alt=""
                 />
-                <p>Apagar Equipo</p>
-              </div>
+              </button>
+              <p>Apagar Equipo</p>
             </div>
           </div>
         </div>
-        <!------------------ BARRA DE TAREAS -------------------->
-        <div class="taskbar">
-          <div class="taskbar__start">
-            <button
-              class="start"
-              id="taskbar__start__button"
-              onclick="openStartMenu()"
-              href=""
-            >
-              <img
-                class="startbutton__icon"
-                src="./Assets/icons/windows start.svg"
-                alt=""
-              />
-              <p class="startbutton__p">Inicio</p>
-            </button>
-          </div>
-          <div class="taskbar__icons">
-            <button class="pinned__icons">
-              <img
-                class="pinned__icon"
-                src="./Assets/icons/InternetExplorer.png"
-                alt=""
-              />
-            </button>
-            <button class="pinned__icons"></button>
-            <div class="taskbar__windows"></div>
-          </div>
-          <div class="taskbar__system--tray">
-            <button class="system__tray--arrows">
-              <img
-                class="system__tray--arrow"
-                src="./Assets/icons/Windows/Taskbar/arrow.svg"
-                alt=""
-              />
-            </button>
-            <button class="system__tray--icons">
-              <img src="./Assets/icons/Windows/wifi.ico" alt="" />
-            </button>
-            <button class="system__tray--icons">
-              <img
-                class="system__tray--icon"
-                src="./Assets/icons/Windows/Messenger.ico"
-                alt=""
-              />
-            </button>
-            <p id="hour">00:00</p>
-          </div>
+      </div>
+      
+      
+      <!------------------ BARRA DE TAREAS -------------------->
+      <div class="taskbar">
+        <div class="taskbar__start">
+          <button
+            class="start"
+            id="taskbar__start__button"
+            onclick="openStartMenu()"
+            href=""
+          >
+            <img
+              class="startbutton__icon"
+              src="./Assets/icons/windows start.svg"
+              alt=""
+            />
+            <p class="startbutton__p">Inicio</p>
+          </button>
+        </div>
+        <div class="taskbar__icons">
+          <button class="pinned__icons">
+            <img
+              class="pinned__icon"
+              src="./Assets/icons/InternetExplorer.png"
+              alt=""
+            />
+          </button>
+          <button class="pinned__icons"></button>
+          <div class="taskbar__windows"></div>
+        </div>
+        <div class="taskbar__system--tray">
+          <button class="system__tray--arrows">
+            <img
+              class="system__tray--arrow"
+              src="./Assets/icons/Windows/Taskbar/arrow.svg"
+              alt=""
+            />
+          </button>
+          <button class="system__tray--icons">
+            <img src="./Assets/icons/Windows/wifi.ico" alt="" />
+          </button>
+          <button class="system__tray--icons">
+            <img
+              class="system__tray--icon"
+              src="./Assets/icons/Windows/Messenger.ico"
+              alt=""
+            />
+          </button>
+          <p id="hour">00:00</p>
         </div>
       </div>
-    </div>
 
     <script src="JS/script.js"></script>
   </body>
