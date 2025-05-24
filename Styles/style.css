@@ -121,6 +121,10 @@ button {
     height: 15px;
 }
 /* --------------------BANDEJA DE SISTEMA--------------------- */
+.taskbar{
+    /* filter: grayscale(0.9); */
+}
+
 .taskbar__system--tray{
     position: absolute;
     right: 0;
@@ -179,6 +183,7 @@ button {
     grid-template-columns: repeat(11, 1fr);
     grid-template-rows: repeat(9, 1fr);
     padding: 5px;
+    filter: grayscale(0.9);
 }
 
 .desktop__icons{

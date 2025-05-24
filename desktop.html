@@ -5,102 +5,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Windows XP</title>
     <link rel="stylesheet" href="./Styles/style.css" />
+    <link rel="stylesheet" href="./Styles/turnoff.css" />
   </head>
 
   <body>
-      <!------------------ ESCRITORIO -------------------->
-      <div class="desktop" id="desktop">
-        <!------------------  MENU DE INICIO -------------------->
-        <div id="start__menu" class="start__menu">
-          <div class="start__menu--profile">
-            <img
-              class="profile__img"
-              src="./Assets/icons/Profile Icons/skater.bmp"
-              alt=""
-            />
-            <p>Jona Saavedra</p>
+    <!------------------ ESCRITORIO -------------------->
+    <div class="desktop" id="desktop">
+      <!------------------  MENU DE INICIO -------------------->
+      <div id="start__menu" class="start__menu">
+        <div class="start__menu--profile">
+          <img
+            class="profile__img"
+            src="./Assets/icons/Profile Icons/skater.bmp"
+            alt=""
+          />
+          <p>Jona Saavedra</p>
+        </div>
+        <div class="start__menu--icons">
+          <div class="icons__left"></div>
+          <div class="icons__right"></div>
+        </div>
+        <div class="start__menu--turnoff">
+          <div class="turnoff__button">
+            <button>
+              <img
+                class="turnoff__img"
+                src="./Assets/icons/Windows/CloseSession.ico"
+                alt=""
+              />
+            </button>
+            <p>Cerrar Sesión</p>
           </div>
-          <div class="start__menu--icons">
-            <div class="icons__left"></div>
-            <div class="icons__right"></div>
-          </div>
-          <div class="start__menu--turnoff">
-            <div class="turnoff__button">
-              <button>
-                <img
-                  class="turnoff__img"
-                  src="./Assets/icons/Windows/CloseSession.ico"
-                  alt=""
-                />
-              </button>
-              <p>Cerrar Sesión</p>
-            </div>
 
-            <div class="turnoff__button">
-              <button>
-                <img
-                  class="turnoff__img"
-                  src="./Assets/icons/Windows/TurnOff.ico"
-                  alt=""
-                />
-              </button>
-              <p>Apagar Equipo</p>
-            </div>
+          <div class="turnoff__button">
+            <button class="shutdown">
+              <img
+                class="turnoff__img"
+                src="./Assets/icons/Windows/TurnOff.ico"
+                alt=""
+              />
+            </button>
+            <p>Apagar Equipo</p>
           </div>
         </div>
       </div>
-      
-      
-      <!------------------ BARRA DE TAREAS -------------------->
-      <div class="taskbar">
-        <div class="taskbar__start">
-          <button
-            class="start"
-            id="taskbar__start__button"
-            onclick="openStartMenu()"
-            href=""
-          >
+    </div>
+
+    <!------------------ BARRA DE TAREAS -------------------->
+    <div class="taskbar">
+      <div class="taskbar__start">
+        <button
+          class="start"
+          id="taskbar__start__button"
+          onclick="openStartMenu()"
+          href=""
+        >
+          <img
+            class="startbutton__icon"
+            src="./Assets/icons/windows start.svg"
+            alt=""
+          />
+          <p class="startbutton__p">Inicio</p>
+        </button>
+      </div>
+      <div class="taskbar__icons">
+        <button class="pinned__icons">
+          <img
+            class="pinned__icon"
+            src="./Assets/icons/InternetExplorer.png"
+            alt=""
+          />
+        </button>
+        <button class="pinned__icons"></button>
+        <div class="taskbar__windows"></div>
+      </div>
+      <div class="taskbar__system--tray">
+        <button class="system__tray--arrows">
+          <img
+            class="system__tray--arrow"
+            src="./Assets/icons/Windows/Taskbar/arrow.svg"
+            alt=""
+          />
+        </button>
+        <button class="system__tray--icons">
+          <img src="./Assets/icons/Windows/wifi.ico" alt="" />
+        </button>
+        <button class="system__tray--icons">
+          <img
+            class="system__tray--icon"
+            src="./Assets/icons/Windows/Messenger.ico"
+            alt=""
+          />
+        </button>
+        <p id="hour">00:00</p>
+      </div>
+    </div>
+
+    <!-- MODAL APAGAR EQUIPO -->
+    <div class="turnoff__window">
+      <div class="turnoff__window--description">
+        <p class="window__description--p">Apagar equipo</p>
+        <img src="./Assets/icons/windows start.svg" alt="" />
+      </div>
+
+      <div class="turnoff__window--buttons">
+        <div class="standby">
+          <button>
             <img
-              class="startbutton__icon"
-              src="./Assets/icons/windows start.svg"
+              class="turnoff__window--img"
+              src="./Assets/icons/Standby.png"
               alt=""
             />
-            <p class="startbutton__p">Inicio</p>
           </button>
+          <p>Suspender</p>
         </div>
-        <div class="taskbar__icons">
-          <button class="pinned__icons">
+        <div class="shutdown">
+          <button>
             <img
-              class="pinned__icon"
-              src="./Assets/icons/InternetExplorer.png"
+              class="turnoff__window--img"
+              src="./Assets/icons/ShutDown.png"
               alt=""
             />
           </button>
-          <button class="pinned__icons"></button>
-          <div class="taskbar__windows"></div>
+          <p>Apagar</p>
         </div>
-        <div class="taskbar__system--tray">
-          <button class="system__tray--arrows">
+        <div class="restart">
+          <button>
             <img
-              class="system__tray--arrow"
-              src="./Assets/icons/Windows/Taskbar/arrow.svg"
+              class="turnoff__window--img"
+              src="./Assets/icons/Restart.png"
               alt=""
             />
           </button>
-          <button class="system__tray--icons">
-            <img src="./Assets/icons/Windows/wifi.ico" alt="" />
-          </button>
-          <button class="system__tray--icons">
-            <img
-              class="system__tray--icon"
-              src="./Assets/icons/Windows/Messenger.ico"
-              alt=""
-            />
-          </button>
-          <p id="hour">00:00</p>
+          <p>Reiniciar</p>
         </div>
       </div>
+
+      <div class="turnoff__window--footer">
+        <button id="cancel" class="cancel">Cancelar</button>
+      </div>
+    </div>
 
     <script src="JS/script.js"></script>
+    <script src="JS/turnoff.js"></script>
   </body>
 </html>
