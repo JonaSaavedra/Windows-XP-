@@ -1,5 +1,4 @@
 const turnOffWindow = document.querySelector(".turnoff__window");
-
 const cancelShutDown = document.getElementById("cancel").addEventListener("click", () => {
     
     turnOffWindow.style.display = "none";
@@ -15,4 +14,7 @@ const shutDownButton = document.querySelector(".shutdown").addEventListener("cli
     const taskBar = document.querySelector(".taskbar");
     taskBar.style.filter = "grayscale(0)";
 
+        // startMenu.style.display = "none";
   });
+// 
+
