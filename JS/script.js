@@ -1,18 +1,29 @@
-// ABRIR MENU DE INICIO
-
+//ABRIR MENU DE INICIO
 var startMenu = document.getElementById("start__menu");
 var startButton = document.getElementById("taskbar__start__button");
 
-function openStartMenu() {
-  //getComputedStyle para obtener el valor real del display
-  var currentDisplay = window.getComputedStyle(startMenu).display;
+document.addEventListener("click", (e) => {
+  const clickedStartButton = e.target.closest("#taskbar__start__button");
+  const clickedStartMenu = e.target.closest("#start__menu");
+  const clickedTurnOff = e.target.closest(".turnoff__img");
 
-  if (currentDisplay === "none") {
-    startMenu.style.display = "block";
-  } else {
+  if (clickedStartButton) {
+    // Alternar el menú
+    if (startMenu.style.display === "block") {
+      startMenu.style.display = "none";
+    } else {
+      startMenu.style.display = "block";
+    }
+  } else if (clickedTurnOff) {
+    // Ocultar si se hace clic en la imagen de apagar
+    startMenu.style.display = "none";
+  } else if (!clickedStartMenu) {
+    // Clic fuera de menú y botón
     startMenu.style.display = "none";
   }
-}
+});
+
+
 
 //ESTABLECER HORA LOCAL
 

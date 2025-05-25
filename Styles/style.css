@@ -34,7 +34,7 @@ body {
   width: 100vw;
   position: relative;
   background: var(--white-color);
-  background-image: url(../Assets/bg/Background\ xp.jpg);
+  background-image: url(../Assets/bg/Background_wxp.jpg);
   background-size: cover;
   -webkit-font-smoothing: antialiased;
   overflow: hidden;
