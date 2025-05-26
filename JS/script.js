@@ -23,8 +23,6 @@ document.addEventListener("click", (e) => {
   }
 });
 
-
-
 //ESTABLECER HORA LOCAL
 
 function showHour() {
@@ -78,7 +76,7 @@ function displayDesktopIcons() {
     desktopIcon.appendChild(iconImg);
     desktopIcon.appendChild(iconP);
     desktop.appendChild(desktopIcon);
-
+    //SINGLE CLICK---------------------------->
     desktopIcon.addEventListener("click", (event) => {
       event.stopPropagation(); // evita el click global
       if (selectedP && selectedP !== iconP) {
@@ -86,6 +84,17 @@ function displayDesktopIcons() {
       }
       iconP.style.backgroundColor = "rgba(42, 90, 236, 0.835)";
       selectedP = iconP;
+    });
+    //DOBLE CLICK----------------------------->
+    desktopIcon.addEventListener("dblclick", (event) => {
+      event.stopPropagation(); // evita el click global
+      if (selectedP && selectedP !== iconP) {
+        selectedP.style.backgroundColor = "";
+      }
+      if (iconP === "Internet Explorer") {
+        iconP.style.backgroundColor = "rgba(236, 42, 42, 0.83)";
+        selectedP = iconP;
+      }
     });
   });
 
